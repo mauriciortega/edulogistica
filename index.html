@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="login-pf">
+<head>
+	<meta charset="utf-8">
+	<title>EduLogistica v0.1</title>
+	
+	<!-- PatternFly Styles -->
+  <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly.min.css">
+  <link rel="stylesheet" href="node_modules/patternfly/dist/css/patternfly-additions.min.css">
+
+  <!-- Bootstrap base + PatternFly extensions + Your styles -->
+  <!-- <link rel="stylesheet" href="css/mystyles.css"> -->
+
+  <!-- JS -->
+  <script src="node_modules/patternfly/node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/patternfly/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/patternfly/dist/js/patternfly.min.js"></script>
+
+  <script src="node_modules/patternfly/node_modules/jquery-match-height/dist/jquery.matchHeight-min.js"></script>
+
+  <script>
+  $(function() {
+    // matchHeight the contents of each .card-pf and then the .card-pf itself
+    $(".row-cards-pf > [class*='col'] > .card-pf .card-pf-title").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-body").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf > .card-pf-footer").matchHeight();
+    $(".row-cards-pf > [class*='col'] > .card-pf").matchHeight();
+    // initialize tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
+
+</head>
+<body>
+  <div class="login-pf-page">
+
+    
+    
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+        <header class="login-pf-page-header">
+          <p>
+            Bienvenido a EduLogistica, por favor inicie sesión para continuar
+          </p>
+        </header>
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+            <div class="card-pf">
+              <header class="login-pf-header">
+                <select class="selectpicker">
+                  <option>Español</option>
+                  <option>Inglés</option>
+                </select>
+                <h1>Inicio de sesión</h1>
+              </header>
+              <form>
+                <div class="form-group">
+                  <label class="sr-only" for="exampleInputEmail1">Id de Usuario</label>
+                  <input class="form-control  input-lg" id="exampleInputEmail1" placeholder="Id de usuario">
+                </div>
+                
+                <div class="form-group">
+                  <label class="sr-only"  for="exampleInputPassword1">Password
+                  </label>
+                  <input type="password" class="form-control input-lg" id="exampleInputPassword1" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                  <label class="sr-only" for="rol">Rol</label>
+                  <select id="rol" class="form-control">
+                    <option>Compras</option>
+                    <option>Ventas</option>
+                    <option>Logística</option>
+                    <option>Inventarios</option>
+                  </select>
+                </div>
+               
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Iniciar sesión</button>
+              </form>
+            </div><!-- card -->
+            
+          </div><!-- col -->
+        </div><!-- row -->
+      </div><!-- col -->
+    </div><!-- row -->
+  </div><!-- container -->
+</div><!-- login-pf-page -->
+</body>
+</html>
